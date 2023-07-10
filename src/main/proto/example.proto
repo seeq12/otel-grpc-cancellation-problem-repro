@@ -1,0 +1,12 @@
+service Example {
+  rpc DoThing(Thing) returns (stream Stuff) {}
+}
+
+message Thing {
+  required string message = 1;
+}
+
+message Stuff {
+  required string message = 1;
+  required bool otherWorkCompleted = 2;
+}
